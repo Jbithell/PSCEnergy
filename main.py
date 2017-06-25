@@ -14,7 +14,7 @@ def index():
     #do whatevr here...
     return "Hello Heruko"
 print("WebServer online")
-'''
+
 def elec_trace():
 	thisusagepoint = le.electricity_useage
 	print("New Reading ", str(thisusagepoint))
@@ -25,4 +25,3 @@ def elec_trace():
 print("Starting monitoring")
 le = pyloopenergy.LoopEnergy(str(os.environ['serial']), str(os.environ['secret']))
 le.subscribe_elecricity(elec_trace) #Start listening for data
-'''
