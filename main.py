@@ -7,18 +7,10 @@ import os #Environment Variables
 import urllib.request #Web request
 from flask import Flask #WebServer
 
+print("Starting")
 app = Flask(__name__) #This is to keep Heroku Happy
 app.run(os.environ.get('PORT')) #This is to keep Heroku Happy
+print("WebServer online")
 
-
-def elec_trace():
-	global conncursor,meterdbrecord,conn
-	thisusagepoint = le.electricity_useage
-	print("New Reading ", str(thisusagepoint))
-	webrequest = urllib.request.urlopen(str(os.environ['url']) + "?kwh=" + str(thisusagepoint))
-	if (webrequest.read() != "DONE"):
-		print("Error sending result")
-	 
-print("Starting monitoring")
-le = pyloopenergy.LoopEnergy(str(os.environ['serial']), str(os.environ['secret']))
-le.subscribe_elecricity(elec_trace) #Start listening for data
+while True:
+	print("Hi")
