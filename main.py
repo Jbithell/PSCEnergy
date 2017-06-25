@@ -16,8 +16,8 @@ def elec_trace():
     thisusagepoint = le.electricity_useage
     print("New Reading ", str(thisusagepoint))
     webrequest = urllib.request.urlopen(str(os.environ['url']) + "?kwh=" + str(thisusagepoint))
-	if (webrequest.read() != "DONE"):
-		print("Error sending result")
+    if (webrequest.read() != "DONE"):
+        print("Error sending result")
    
 print("Starting monitoring")
 le = pyloopenergy.LoopEnergy(str(os.environ['serial']), str(os.environ['secret']))
