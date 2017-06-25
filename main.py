@@ -16,8 +16,4 @@ def elec_trace():
    
 print("Starting monitoring")
 le = pyloopenergy.LoopEnergy(str(os.environ['serial']), str(os.environ['secret']))
-try:
-    le.subscribe_elecricity(elec_trace) #Start listening for data
-except:
-    print("***************************RESTARTING SCRIPT DUE TO EXCEPTION IN ENERGY MONITORING*************************** \n*")
-    os.execl(sys.executable, sys.executable, *sys.argv)
+le.subscribe_elecricity(elec_trace) #Start listening for data
