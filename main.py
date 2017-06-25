@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import logging #Handy Bug Fix
 logging.basicConfig() #Handy Bug Fix - see https://github.com/pavoni/pyloopenergy/issues/14
-import pyloopenergy  #Git Pull 
+import pyloopenergy  #pyloopenergy
 import sys #For command line arguments
 import os #Environment Variables
 import urllib.request #Web request
