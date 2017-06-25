@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import logging #Handy Bug Fix
 logging.basicConfig() #Handy Bug Fix - see https://github.com/pavoni/pyloopenergy/issues/14
 import pyloopenergy  #Git Pull 
