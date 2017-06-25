@@ -5,6 +5,11 @@ import pyloopenergy  #Git Pull
 import sys #For command line arguments
 import os #Environment Variables
 import urllib.request #Web request
+from flask import Flask #WebServer
+
+app = Flask(__name__) #This is to keep Heroku Happy
+app.run(os.environ.get('PORT')) #This is to keep Heroku Happy
+
 
 def elec_trace():
     global conncursor,meterdbrecord,conn

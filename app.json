@@ -1,8 +1,0 @@
-{
-  "name": "PSC Energy",
-  "description": "Backend hosted energy monitoring system for Porthmadog Sailing Club ",
-  "image": "heroku/python",
-  "repository": "https://github.com/Jbithell/PSCEnergy",
-  "keywords": [ ],
-  "addons": [ ]
-}
