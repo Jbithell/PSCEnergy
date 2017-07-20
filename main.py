@@ -7,7 +7,6 @@ import urllib.request #Web request
 from raven import Client #Logging
 ravenErrorClient = Client('https://45d5760c5f86474693af392908cd6915:5b846b53fa2544a8af6d58e095cc43e2@sentry.io/193950') #Setup error client
 
-
 print("Starting")
 def elec_trace():
 	thisusagepoint = le.electricity_useage
