@@ -2,25 +2,16 @@
 import logging #Handy Bug Fix
 logging.basicConfig() #Handy Bug Fix - see https://github.com/pavoni/pyloopenergy/issues/14
 import pyloopenergy  #pyloopenergy
-import sys #For command line arguments
 import os #Environment Variables
 import urllib.request #Web request
-from flask import Flask #WebServer
+
 
 print("Starting")
-app = Flask(__name__) #This is to keep Heroku Happy
-@app.route("/")
-def index():
-    #do whatevr here...
-    return "Hello Heruko"
-print("WebServer online")
-
 def elec_trace():
 	thisusagepoint = le.electricity_useage
 	print("New Reading ", str(thisusagepoint))
 	webrequest = urllib.request.urlopen(str(os.environ['url']) + "?kwh=" + str(thisusagepoint))
-	print(webrequest.read())
-	if (webrequest.read() != "DONE"):
+	if (str(webrequest.read().decode("utf-8")) != 'DONE'):
 		print("Error sending result")
 	 
 print("Starting monitoring")
